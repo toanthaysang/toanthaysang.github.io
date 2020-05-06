@@ -1,0 +1,4 @@
+B1: git status -> Nếu hiện ra mấy cái đỏ đỏ thì làm bước 2 còn ra màu xanh thì làm bước 3
+B2: git add .
+B3: git commit -m "upload"
+B4: git push origin master

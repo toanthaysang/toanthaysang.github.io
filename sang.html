@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+  <style>
+    .input {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    #search {
+      width: 200px;
+      font-size: larger;
+    }
+
+    @media only screen and (max-width: 600px) {
+      #search {
+        font-size: xx-large;
+      }
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search id</title>
+</head>
+
+<body id="body" style="background-image: url('background.jpg');">
+  <div class="input">
+    <input id="search">
+    <button onclick="find()">Tìm</button>
+  </div>
+  <img id="img">
+</body>
+
+<script>
+  const input = document.getElementById('search')
+  input.focus()
+  input.addEventListener("keypress", (event) => {
+    if (event.keyCode === 13) {
+      find()
+    }
+  })
+
+  function find() {
+    const val = document.getElementById('search').value
+    var img = document.getElementById('img')
+    const showImg = new Image()
+    const text = val.toUpperCase()
+    showImg.src = `./images/${text}.png`
+    showImg.onload = () => {
+      img.src = `./images/${text}.png`
+      img.style.width = "100%"
+      img.style.marginTop = "10px"
+    }
+  }
+</script>
