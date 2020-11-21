@@ -2,6 +2,12 @@
 
 <head>
   <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
     .input {
       width: 100%;
       display: flex;
@@ -18,42 +24,63 @@
         font-size: xx-large;
       }
     }
+
+    .frame {
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
   </style>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Search id</title>
 </head>
 
-<body id="body" style="background-image: url('background.jpg');">
+<body id="body" style="background-image: url('background.jpg')">
   <div class="input">
-    <input id="search">
+    <select name="type" id="type">
+      <option value="png">png</option>
+      <option value="pdf">pdf</option>
+    </select>
+    <input id="search" />
     <button onclick="find()">Tìm</button>
   </div>
-  <img id="img">
+  <img id="img" />
+  <iframe class="frame" id="frame"></iframe>
 </body>
 
 <script>
-  const input = document.getElementById('search')
-  input.focus()
+  const input = document.getElementById("search");
+  const frame = document.getElementById("frame");
+
+  input.focus();
   input.addEventListener("keypress", (event) => {
     if (event.keyCode === 13) {
-      find()
+      find();
     }
-  })
+  });
 
   function find() {
-    const val = document.getElementById('search').value
-    var img = document.getElementById('img')
-    const text = val.toUpperCase()
+    const val = document.getElementById("search").value;
+    const type = document.getElementById("type").value;
+    const text = val.toUpperCase();
 
-    let n =35;
-    for (let i = 1; i <= n; i++) {
-      const showImg = new Image()
-      showImg.src = `./image${i}/${text}.png`
-      showImg.onload = () => {
-        img.src = `./image${i}/${text}.png`
-        img.style.width = "100%"
-        img.style.marginTop = "10px"
+    let n = 3;
+    if (type === "png") {
+      frame.style.display = "none";
+      var img = document.getElementById("img");
+      for (let i = 1; i <= n; i++) {
+        const showImg = new Image();
+        showImg.src = `./image${i}/${text}.png`;
+        showImg.onload = () => {
+          img.src = `./image${i}/${text}.png`;
+          img.style.width = "100%";
+          img.style.marginTop = "10px";
+        };
       }
+    } else if (type === "pdf") {
+      const index = text.split("_")[0];
+      frame.src = `./pdf${index}/${text}.pdf`;
+      frame.style.display = "block";
     }
   }
 </script>
