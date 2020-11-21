@@ -30,6 +30,10 @@
       height: 100%;
       display: none;
     }
+    
+    #img {
+      display: none;
+    }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Search id</title>
@@ -50,6 +54,7 @@
 
 <script>
   const input = document.getElementById("search");
+  var img = document.getElementById("img");
   const frame = document.getElementById("frame");
 
   input.focus();
@@ -67,7 +72,7 @@
     let n = 3;
     if (type === "png") {
       frame.style.display = "none";
-      var img = document.getElementById("img");
+      
       for (let i = 1; i <= n; i++) {
         const showImg = new Image();
         showImg.src = `./image${i}/${text}.png`;
@@ -75,9 +80,11 @@
           img.src = `./image${i}/${text}.png`;
           img.style.width = "100%";
           img.style.marginTop = "10px";
+          img.style.display = "block";
         };
       }
     } else if (type === "pdf") {
+      img.style.display = "none";
       const index = text.split("_")[0];
       frame.src = `./pdf${index}/${text}.pdf`;
       frame.style.display = "block";
