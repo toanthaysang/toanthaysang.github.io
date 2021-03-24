@@ -54,6 +54,7 @@
   <iframe class="frame" id="frame"></iframe>
 </body>
 <!-- Đoạn này bắt đầu đồng hồ đếm ngước -->
+
 <style type="text/css">
 #clockdiv h2{font-family:'Roboto';font-weight:100;color:#034688;text-align:center;font-size:40px;margin:0 0 16px}
 #clockdiv{font-family:sans-serif;color:#fff;background:rgba(255,255,255,0.63);display:inline-block;font-weight:100;text-align:center;font-size:30px;margin:20px auto;padding:20px;width:100%}
@@ -61,74 +62,57 @@
 #clockdiv div > span{padding:0;border-radius:3px;font-size:58px;display:inline-block}
 #clockdiv .smalltext{padding-top:5px;font-size:16px}
 </style>
-
-<div id="clockdiv">
-  <h2>THI THPT QUỐC GIA 2021</h2>
-  <div>
-    <span class="days"></span>
-    <div class="smalltext">Ngày</div>
-  </div>
-  <div>
-    <span class="hours"></span>
-    <div class="smalltext">Giờ</div>
-  </div>
-  <div>
-    <span class="minutes"></span>
-    <div class="smalltext">Phút</div>
-  </div>
-  <div>
-    <span class="seconds"></span>
-    <div class="smalltext">Giây</div>
+<style type="text/css">
+.times{text-transform:none;font-size:20px;padding-right:30px}
+#times-countdown{background:rgba(255,255,255,0.62);color:white;font-family:Oswald,Arial,Sans-serif;font-size:250%;text-transform:uppercase;text-align:left;font-weight:normal;padding:0 0 30px 0;border-radius:5px}
+#demthoigian-share123{max-width:100%;margin:0 auto;text-align:center}
+span#countdown{margin:10px 10px 20px;border-radius:9px;padding:20px;text-align:center;background-color:rgba(1,49,97,.85);color:white;font-size:170%;font-weight:600;font-family:'Nove Cento'}
+#times-countdown h2{font-size:40px;color:#034688;font-weight:700;text-align:center;padding:6px;margin:18px}
+</style>
+ <div id='times-countdown'>
+  <h2>KỲ THI THPT QUỐC GIA 2021 CHỈ CÒN </h2>
+     <div id='demthoigian-share123'>
+   <span id='countdown'/>
   </div>
 </div>
- 
-    <script type='text/javascript'>
+<script type='text/javascript'>
 //<![CDATA[
-function getTimeRemaining(endtime) {
-  var t = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor((t / 1000) % 60);
-  var minutes = Math.floor((t / 1000 / 60) % 60);
-  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-  var days = Math.floor(t / (1000 * 60 * 60 * 24));
-  return {
-    'total': t,
-    'days': days,
-    'hours': hours,
-    'minutes': minutes,
-    'seconds': seconds
-  };
-}
+// đặt ngày để bắt đầu đếm ngược, ở đây là 28-12-2016
+var target_date = new Date("July 7, 2021").getTime();
 
-function initializeClock(id, endtime) {
-  var clock = document.getElementById(id);
-  var daysSpan = clock.querySelector('.days');
-  var hoursSpan = clock.querySelector('.hours');
-  var minutesSpan = clock.querySelector('.minutes');
-  var secondsSpan = clock.querySelector('.seconds');
+// thêm biến cho các đơn vị thời gian
+var days, hours, minutes, seconds;
 
-  function updateClock() {
-    var t = getTimeRemaining(endtime);
+//đặt id là countdown
+var countdown = document.getElementById("countdown");
 
-    daysSpan.innerHTML = t.days;
-    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+// cập nhật id "countdown" mỗi 1 giây
+setInterval(function () {
 
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
-    }
-  }
+    // thiết lập cho ngày giờ hiện tại và ngày kết thúc
+    var current_date = new Date().getTime();
+    var seconds_left = (target_date - current_date) / 1000;
 
-  updateClock();
-  var timeinterval = setInterval(updateClock, 1000);
-}
+    // tính ngày, giờ, phút và giây
+    days = parseInt(seconds_left / 86400);
+    seconds_left = seconds_left % 86400;
+   
+    hours = parseInt(seconds_left / 3600);
+    seconds_left = seconds_left % 3600;
+   
+    minutes = parseInt(seconds_left / 60);
+    seconds = parseInt(seconds_left % 60);
+   
+    // thiết lập cho biến countdown hiển thị ra ngoài
+countdown.innerHTML = days + " <span class=\'times\'>ngày</span> " + hours + " <span class=\'times\'>giờ</span> "
+  + minutes + " <span class=\'times\'>phút</span> " + seconds + " <span class=\'times\'>giây</span>";
 
-var deadline = new Date(Date.parse(new Date()) + 104 * 24 * 60 * 60 * 1000);
-initializeClock('clockdiv', deadline);
+}, 1000);
 //]]>
 </script>
 
 <!-- Đoạn này kết thúc đồng hồ đếm ngước -->
+
 
 <!-- Đoạn này làm tài trợ -->
 <center class="ttweb">
