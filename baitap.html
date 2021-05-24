@@ -1,1 +1,319 @@
-baitap.html
+<!DOCTYPE html>
+<head>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    .input {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    #search {
+      width: 200px;
+      font-size: larger;
+    }
+
+    @media only screen and (max-width: 600px) {
+      #search {
+        font-size: xx-large;
+      }
+    }
+
+    .frame {
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+    
+    #img {
+      display: none;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search id</title>
+</head>
+
+
+
+
+<body id="body" style="background-image: url('background.jpg')">
+  <div class="input">
+    <select name="type" id="type">
+      <option value="png">png</option>
+      <option value="pdf">pdf</option>
+    </select>
+    <input id="search" />
+    <button onclick="find()">Tìm</button>
+  </div>
+  <img id="img" />
+  <iframe class="frame" id="frame"></iframe>
+</body>
+
+
+
+<html>
+
+<head>
+   <title>Code Menu và logo responsive đơn giản với HTMl, CSS, Javascript</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1" />
+   <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
+   <link rel="icon" href="http://thanhtungweb.com/wp-content/themes/goodnews5/images/favicon.ico" type="image/x-ico"/>
+   <link rel="stylesheet" type="text/css" href="css.css">
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script type="text/javascript" src="javascript.js"></script>
+</head>
+<body>
+<nav id='cssmenu'>
+   <div class="logo"><a href="index.html">T.Sang nhc </a></div>
+   <div id="head-mobile"></div>
+   <div class="button"></div>   
+   <ul>
+      <li class='active'><a href='#h'>HOME</a></li>
+      
+
+      <li><a href='#'>GT 12</a>
+         <ul>
+            <li><a href='#'>Chương 1 - Hàm Số</a>
+               <ul id="main_menu">
+                    <li><a href='#'>Bài 1: Tính đơn điệu h.số</a>
+						<ul class="menu-sub" >
+							<li><a href='#'>Dạng 1: Lý Thuyết</a></li>
+							<li><a href='#'>Dạng 2: BBT - Đồ thị f(x)</a></li>
+							<li><a href='#'>Dạng 3: Tìm khoảng đơn điệu</a></li>
+							<li><a href='#'>Dạng 4: Bài toán có tham số m</a></li>
+							<li><a href='#'>Dạng 5: Đồ thị hàm f'(x)</a></li>
+							<li><a href='#'>Dạng 6: Đồ thị hàm f'(u) với u=u(x)</a></li>
+						</ul>
+				    </li>
+					<li><a href='#'>Bài 2: Cực trị hàm số</a>
+						<ul class="menu-sub" >
+							<li><a href='#'>Dạng 1: Lý Thuyết</a></li>
+							<li><a href='#'>Dạng 2: Đồ thị f(x)</a></li>
+							<li><a href='#'>Dạng 3: BBT</a></li>
+							<li><a href='#'>Dạng 4: Tìm cực trị của hàm số</a></li>
+							<li><a href='#'>Dạng 5: Bài toán có tham số m</a></li>
+							<li><a href='#'>Dạng 6: Biểu thức - đồ thị hàm f'(x)</a></li>
+							<li><a href='#'>Dạng 7: Hàm ẩn có tham số m</a></li>
+						</ul>
+				    </li>
+					
+					<li><a href='#'>Bài 3: Min-Max </a>
+						<ul class="menu-sub" >
+							<li><a href='#'>Dạng 1: Tính đơn điệu hàm số</a></li>
+							<li><a href='#'>Dạng 2: Tìm m để hs đơn điệu trên R</a></li>
+							<li><a href='#'>Dạng 3: Tìm m để hs đơn điệu trên R</a></li>
+							<li><a href='#'>Dạng 4: Tìm m để hs đơn điệu trên R</a></li>
+							<li><a href='#'>Dạng 5: Tìm m để hs đơn điệu trên R</a></li>
+						</ul>
+				    </li>
+					
+					<li><a href='#'>Bài 4: Tiệm cận của đồ thị hàm số</a>
+						<ul class="menu-sub" >
+							<li><a href='#'>Dạng 1: Tính đơn điệu hàm số</a></li>
+							<li><a href='#'>Dạng 2: Tìm m để hs đơn điệu trên R</a></li>
+							<li><a href='#'>Dạng 3: Tìm m để hs đơn điệu trên R</a></li>
+							<li><a href='#'>Dạng 4: Tìm m để hs đơn điệu trên R</a></li>
+							<li><a href='#'>Dạng 5: Tìm m để hs đơn điệu trên R</a></li>
+						</ul>
+				    </li>
+					
+					<li><a href='#'>Bài 5: Sự Tương Giao</a>
+						<ul class="menu-sub" >
+							<li><a href='#'>Dạng 1: Tính đơn điệu hàm số</a></li>
+							<li><a href='#'>Dạng 2: Tìm m để hs đơn điệu trên R</a></li>
+							<li><a href='#'>Dạng 3: Tìm m để hs đơn điệu trên R</a></li>
+							<li><a href='#'>Dạng 4: Tìm m để hs đơn điệu trên R</a></li>
+							<li><a href='#'>Dạng 5: Tìm m để hs đơn điệu trên R</a></li>
+						</ul>
+				    </li>
+					
+					<li><a href='#'>Bài 1: Tính đơn điệu h.số</a>
+						<ul class="menu-sub" >
+							<li><a href='#'>Dạng 1: Tính đơn điệu hàm số</a></li>
+							<li><a href='#'>Dạng 2: Tìm m để hs đơn điệu trên R</a></li>
+							<li><a href='#'>Dạng 3: Tìm m để hs đơn điệu trên R</a></li>
+							<li><a href='#'>Dạng 4: Tìm m để hs đơn điệu trên R</a></li>
+							<li><a href='#'>Dạng 5: Tìm m để hs đơn điệu trên R</a></li>
+						</ul>
+				    </li>
+					
+                  <li><a href='#'>Sub Product</a></li>
+               </ul>
+            </li>
+			
+            <li><a href='#'>Chương 2 - Mũ Lôgarit</a>
+               <ul>
+                  <li><a href='#'>Sub Product</a></li>
+                  <li><a href='#'>Sub Product</a></li>
+               </ul>
+            </li>
+			
+			<li><a href='#'>Chương 3 - Tích Phân</a>
+               <ul>
+					<li><a href='#'>Bài 1: Nguyên Hàm</a>
+						<ul class="menu-sub" >
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/nguyen-ham-ly-thuyet.html' target="_blank">Lý Thuyết</a></li>
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/nguyen-ham-co-ban.html' target="_blank">Dạng 1: Nguyên Hàm Cơ Bản</a></li>
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/nguyen-ham-oi-bien.html' target="_blank">Dạng 2: Nguyên Hàm Đổi Biến</a></li>
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/nguyen-ham-tung-phan.html' target="_blank">Dạng 3: Nguyên Hàm Từng Phần</a></li>
+						</ul>
+				    </li>
+					
+					<li><a href='#'>Bài 2: Tích Phân</a>
+						<ul class="menu-sub" >
+							<li><a href='#' target="_blank">Lý Thuyết</a></li>
+							<li><a href='#' target="_blank">Dạng 1: Tích Phân Cơ Bản</a></li>
+							<li><a href='#' target="_blank">Dạng 2: Tích Phân Đổi Biến</a></li>
+							<li><a href='#' target="_blank">Dạng 3: Tích Phân Từng Phần</a></li>
+							<li><a href='#' target="_blank">Dạng 4: Tích Phân Có GTTĐ</a></li>
+							
+						</ul>
+				    </li>
+					
+					
+               </ul>
+            </li>
+			
+			<li><a href='#'>Chương 4 - Số Phức</a>
+               <ul>
+                    <li><a href='#'>Bài 1: Các phép toán số phức</a>
+						<ul class="menu-sub" >
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/cac-phep-toan-so-phuc-bai-1-p1.html' target="_blank">Dạng 1: Lý Thuyết</a></li>
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/cac-phep-toan-so-phuc-bai-1-dang-2.html' target="_blank">Dạng 2: Các yếu tố cơ bản của số phức</a></li>
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/cac-phep-toan-so-phuc-bai-1-p3.html' target="_blank">Dạng 3: Cực trị số phức</a></li>
+						</ul>
+				    </li>
+					
+                  <li><a href='#'>Bài 2: Biểu diễn hình của số phức</a>
+						<ul class="menu-sub" >
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/bieu-dien-hinh-hoc-cua-so-phuc-bai-toan.html' target="_blank">Dạng 1: Lý Thuyết - ví dụ mẫu</a></li>
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/bieu-dien-hinh-hoc-cua-so-phuc-bai-toan_6.html' target="_blank">Dạng 2: Tập hợp điểm là đường thẳng</a></li>
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/bieu-dien-hinh-hoc-cua-so-phuc-bai-toan_48.html' target="_blank">Dạng 3: Tập hợp điểm là đường tròn</a></li>
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/bieu-dien-hinh-hoc-cua-so-phuc-bai-toan_72.html' target="_blank">Dạng 4: Tập hợp điểm là đường elip</a></li>
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/bieu-dien-hinh-hoc-cua-so-phuc-bai-toan_34.html' target="_blank">Dạng 5: PP bình phương vô hướng</a></li>
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/bieu-dien-hinh-hoc-cua-so-phuc-bai-toan_5.html' target="_blank">Dạng 6: Sự tương giao - hình chiếu</a></li>
+						</ul>
+				  </li>
+				  
+				  
+				  <li><a href='#'>Bài 3: Phương Trình Bậc 2 - Bậc Cao Trên C</a>
+						<ul class="menu-sub" >
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/phuong-trinh-bac-hai-tren-tap-so-phuc-p1.html' target="_blank"> Lý Thuyết - Ví dụ mẫu</a></li>
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/phuong-trinh-bac-hai-tren-tap-so-phuc.html' target="_blank">DẠNG 1: PHƯƠNG TRÌNH BẬC 2</a></li>
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/phuong-trinh-bac-hai-tren-tap-so-phuc_6.html' target="_blank">Dạng 2: Các thuộc tính của số phức z</a></li>
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/phuong-trinh-bac-hai-tren-tap-so-phuc_13.html' target="_blank">Dạng 3: Biểu diễn hình học của số phức</a></li>
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/bieu-dien-hinh-hoc-cua-so-phuc-bai-toan_34.html' target="_blank">Dạng 4: Phương trình bậc cao trong số phức</a></li>
+							<li><a href='https://thaysangnhc.blogspot.com/2021/02/bieu-dien-hinh-hoc-cua-so-phuc-bai-toan_5.html' target="_blank">Dạng 5: Sự tương giao - hình chiếu</a></li>
+						</ul>
+				  </li>
+				  
+               </ul>
+            </li>
+			
+			
+         </ul>
+      </li>
+	  
+	  <li><a href='#'>HH 12</a>
+         <ul>
+            <li><a href='#p1'>Product 1</a>
+               <ul>
+                  <li><a href='#sp1'>Sub Product</a></li>
+                  <li><a href='#'>Sub Product</a></li>
+               </ul>
+            </li>
+            <li><a href='#'>Product 2</a>
+               <ul>
+                  <li><a href='#'>Sub Product</a></li>
+                  <li><a href='#'>Sub Product</a></li>
+               </ul>
+            </li>
+         </ul>
+      </li>
+	  
+	  <li><a href='#'>Toán 11</a>
+         <ul>
+            <li><a href='#p1'>Product 1</a>
+               <ul>
+                  <li><a href='#sp1'>Sub Product</a></li>
+                  <li><a href='#'>Sub Product</a></li>
+               </ul>
+            </li>
+            <li><a href='#'>Product 2</a>
+               <ul>
+                  <li><a href='#'>Sub Product</a></li>
+                  <li><a href='#'>Sub Product</a></li>
+               </ul>
+            </li>
+         </ul>
+      </li>
+	  
+	  <li><a href='#'>Toán 10</a>
+         <ul>
+            <li><a href='#p1'>Product 1</a>
+               <ul>
+                  <li><a href='#sp1'>Sub Product</a></li>
+                  <li><a href='#'>Sub Product</a></li>
+               </ul>
+            </li>
+            <li><a href='#'>Product 2</a>
+               <ul>
+                  <li><a href='#'>Sub Product</a></li>
+                  <li><a href='#'>Sub Product</a></li>
+               </ul>
+            </li>
+         </ul>
+      </li>
+	  
+	  
+      <li><a href='#'>VDC 8+,9+...</a></li>
+      <li><a href='#'>LÝ</a></li>
+      <li><a href='#'>Buy Book</a>
+		<ul>
+            <li><a href='#'>Form đăng ký</a></li>
+			<li><a href='#'>Học Kỳ I - K12</a></li>
+            <li><a href='#'>Học Kỳ II - K12</a></li>
+			<li><a href='#'>Tổng ôn - 50 chuyên đề</a></li>
+			<li><a href='#'>Bộ đề LTĐH</a></li>
+			<li><a href='#'>Tổng hợp full Toán Lý Anh</a></li>
+         </ul>
+	  </li>
+	  
+	  
+      <li><a href='#'>Liên hệ</a>
+		<ul>
+            <li><a href='https://www.facebook.com/groups/4972937122777841'>Group Facebook</a></li>
+        </ul>
+	  
+	  </li>
+	  
+   </ul>
+</nav>
+
+<center class="ttweb">
+  <p class="ttweb-info">Thầy Sang - THPT NGUYỄN HỮU CẢNH</p>
+  <p class="ttweb-des">Bài nào chưa hiểu rõ - các em có thể xem các ví dụ mẫu trên menu wed nhé!</p>
+</center>
+
+
+
+<div class="footer-bar">
+    <span class="article-wrapper">
+        <span class="article-label">Xem Bài Viết: </span>
+        <span class="article-link"><a href="https://thaysangnhc.blogspot.com/">Tạo Menu và logo responsive đơn giản với HTLM + CSS + Javascript</a></span>
+    </span>
+
+    <span class="copyright">2021 @ Thiết kế - <a href="https://thaysangnhc.blogspot.com/">Nguyễn Văn Sang - 0389.821.115 </a></span>
+</div>
+    
+</body>
+</html>
+
+
+
