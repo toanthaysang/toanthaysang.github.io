@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <body> 
-           <h2><a href='#h'>Chuyên Đề Hàm Số - Các Bài Toán Vận Dụng Cao</a></h2>
-            <iframe src="https://drive.google.com/file/d/10iZuZa-SjkkpDN63XBZrbWoV2zcaXjq8/preview" width="640" height="480"></iframe>
-  
+   <ul>
+    <h1> <a href='#h'>HOME</a></h1>
+	<h2> <a href='#h'>HOME</a></h2>
+	<h3> <a href='#h'>VẬN DỤNG CAO CHƯƠNG HÀM SỐ</a>
+    <li><a href='#'>GT 12</a>
+         <ul>
+            <li><a href='https://toanthaysang.github.io/VDC/HamSo/SuBienThienHS'>Chuyên Đề Hàm Số - Các Bài Toán Vận Dụng Cao</a></li>
+			<li><a href="https://drive.google.com/file/d/11269rLU-luypgwVzkcn0A58lasatNZQX/view" target="_self">Click here</a></li>
+            <li><a <iframe src="https://drive.google.com/file/d/10iZuZa-SjkkpDN63XBZrbWoV2zcaXjq8/preview" width="640" height="480"></iframe> Chương 2 - Mũ Lôgarit</a></li>
+			<iframe src="https://drive.google.com/file/d/10iZuZa-SjkkpDN63XBZrbWoV2zcaXjq8/preview" width="640" height="480"></iframe>
+			<li><a href='#'>Chương 3 - Tích Phân</a></li>
+		</ul>	
+    </li>
+	</h3>
+	</ul>
+<center class="ttweb">
+  <p class="ttweb-info">Thầy Sang - THPT NGUYỄN HỮU CẢNH</p>
+  <p class="ttweb-des">Bài nào chưa hiểu rõ - các em có thể xem các ví dụ mẫu trên menu wed nhé!</p>
+</center>
+    
 </body>
 </html>
