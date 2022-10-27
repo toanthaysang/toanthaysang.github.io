@@ -135,7 +135,7 @@ countdown.innerHTML = days + " <span class=\'times\'>ngày</span> " + hours + " 
   function find() {
     const val = document.getElementById("search").value;
     const type = document.getElementById("type").value;
-    const text = val.toString();
+    const text = val.toUpperCase();
 
     let n = 100;
     if (type === "png") {
